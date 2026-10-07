@@ -1,10 +1,15 @@
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import Properties from './pages/Properties'
+import Dashboard from './pages/Dashboard'
+
 function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-900">
-      <h1 className="text-5xl font-bold text-white">
-        PropIntel
-      </h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/properties" element={<Properties />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+    </Routes>
   )
 }
 
